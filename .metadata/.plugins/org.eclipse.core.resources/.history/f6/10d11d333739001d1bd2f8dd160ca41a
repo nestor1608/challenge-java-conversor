@@ -1,0 +1,13 @@
+package ar.com.conversor.clases;
+
+import javax.swing.JOptionPane;
+
+public class Conversor {
+	
+	public void convertidorMonedaExtranjera(double valor , double moneda) {
+		double monedaValor= valor/ moneda;
+		monedaValor = (double) Math.round(monedaValor*100d)/100; 
+		JOptionPane.showMessageDialog(null,"cantida " + monedaValor );
+	}
+	
+}

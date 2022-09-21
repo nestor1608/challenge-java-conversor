@@ -1,0 +1,69 @@
+package ar.com.conversor.clases;
+
+import javax.swing.JOptionPane;
+
+public class Moneda { 
+	double dolar = 275.00;
+	double euro = 144.00;
+	double libra = 168.50;
+	double won = 9.65;
+	double yen= 1.2;
+	
+	
+	public void aMonedaExtranjera() {
+		Conversor conversor= new Conversor();
+		String opcionMoneda = JOptionPane.showInputDialog(null," Moneda a convertir", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+				new Object[] {"Dolar" , " Euros","Libras-esterlinas","Yen-japonés","Won-surcoreano"},"Elegir").toString();
+		double cambio;
+		switch (opcionMoneda) {
+		case "Dolar":
+			cambio = conversor.convertidorMonedaExtranjera( this.dolar);
+			JOptionPane.showMessageDialog(null," es igual a " + cambio + " Dolar"  );
+			break;
+		case"Euros":
+			cambio = conversor.convertidorMonedaExtranjera(this.euro);
+			JOptionPane.showMessageDialog(null, " es igual a " + cambio + "Euros"  );
+			break;
+		case "Libras-esterlinas":
+			cambio = conversor.convertidorMonedaExtranjera(this.libra );
+			JOptionPane.showMessageDialog(null,"es igual a " + cambio + " Libras-esterlinas"  );
+			break;
+		case "Yen-japonés":
+			cambio = conversor.convertidorMonedaExtranjera(this.yen);
+			JOptionPane.showMessageDialog(null, " es igual a " + cambio + " Yenes"  );
+			break;
+		case "Won-surcoreano":
+			cambio = conversor.convertidorMonedaExtranjera(this.won);
+			JOptionPane.showMessageDialog(null, " es igual a " + cambio + " Won"  );
+			break;
+		}		
+	}
+	public void aPesos() {
+		Conversor conversor= new Conversor();
+		String opcionMoneda = JOptionPane.showInputDialog(null," Moneda", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+				new Object[] {"Dolar" , " Euros","Libras-esterlinas","Yen-japonés","Won-surcoreano"},"Elegir").toString();
+		double cambio;
+		switch (opcionMoneda) {
+		case "Dolar":
+			cambio = conversor.convertirAPesos( this.dolar);
+			JOptionPane.showMessageDialog(null," es igual a $ " + cambio + " Pesos");
+			break;
+		case"Euros":
+			cambio = conversor.convertirAPesos(this.euro);
+			JOptionPane.showMessageDialog(null, " es igual a $ " + cambio + " Pesos");
+			break;
+		case "Libras-esterlinas":
+			cambio = conversor.convertirAPesos(this.libra );
+			JOptionPane.showMessageDialog(null,"es igual a $ " + cambio + " Pesos");
+			break;
+		case "Yen-japonés":
+			cambio = conversor.convertirAPesos(this.yen);
+			JOptionPane.showMessageDialog(null, " es igual a $ " + cambio + " Pesos");
+			break;
+		case "Won-surcoreano":
+			cambio = conversor.convertirAPesos(this.won);
+			JOptionPane.showMessageDialog(null, " es igual a $ " + cambio + " Pesos");
+			break;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+package ar.com.conversor.clases;
+
+import javax.swing.JOptionPane;
+
+public class Moneda { 
+	double dolar = 275.00;
+	double euro = 144.00;
+	double libra = 168.50;
+	double won = 9.65;
+	double yen= 1.2;
+	
+	
+	public void eleccionMoneda(double valor) {
+		Conversor conversor= new Conversor();
+		String opcionMoneda = JOptionPane.showInputDialog(null,"Selecione Moneda a convertir", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+				new Object[] {"Convertir de pesos a Dolar" , "Convertir de pesos a Euros","Convertir de pesos a Libras-esterlinas","Convertir de pesos a Yen-japonés",
+						"Convertir de pesos a Won-surcoreano"},"Elegir").toString();
+		double cambio;
+		switch (opcionMoneda) {
+		case "Convertir de pesos a Dolar":
+			cambio = conversor.convertidorMonedaExtranjera(valor, this.dolar);
+			JOptionPane.showMessageDialog(null,valor + " pesos es igual a " + cambio + " Dolar"  );
+			break;
+		case"Convertir de pesos a Euros":
+			cambio = conversor.convertidorMonedaExtranjera(valor,this.euro);
+			JOptionPane.showMessageDialog(null,valor + " pesos es igual a " + cambio + " Dolar"  );
+			break;
+		case "Convertir de pesos a Libras-esterlinas":
+			cambio = conversor.convertidorMonedaExtranjera(valor,this.libra );
+			JOptionPane.showMessageDialog(null,valor + " pesos es igual a " + cambio + " Dolar"  );
+			break;
+		case "Convertir de pesos a Yen-japonés":
+			cambio = conversor.convertidorMonedaExtranjera(valor,this.yen);
+			JOptionPane.showMessageDialog(null,valor + " pesos es igual a " + cambio + " Dolar"  );
+			break;
+		case "Convertir de pesos a Won-surcoreano":
+			cambio = conversor.convertidorMonedaExtranjera(valor,this.won);
+			JOptionPane.showMessageDialog(null,valor + " pesos es igual a " + cambio + " Dolar"  );
+			break;
+		}
+		
+	}
+}

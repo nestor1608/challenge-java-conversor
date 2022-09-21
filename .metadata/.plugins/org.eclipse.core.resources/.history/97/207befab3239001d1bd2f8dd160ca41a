@@ -1,0 +1,10 @@
+package ar.com.conversor.clases;
+
+public class Conversor {
+	
+	public void convertidorMonedaExtranjera(double valor , double moneda) {
+		double monedaValor= valor/ moneda;
+		monedaValor = (double) Math.round(monedaValor*100d)/100; 
+	}
+	
+}

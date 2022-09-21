@@ -1,0 +1,27 @@
+package ar.com.conversor.clases;
+
+import javax.swing.*;
+public class Main {
+	public static void main(String[] args) {
+		
+		while(true) {
+			String opcionMenu = JOptionPane.showInputDialog(null,"Selecione opcion de conversor", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+					new Object[] {"Conversor de Monedas" , "Conversor de Temperatura"},"Elegir").toString(); 
+			float cantidad;
+			switch (opcionMenu) {
+			case "Conversor de Monedas":
+				cantidad = Integer.parseInt(JOptionPane.showInputDialog(null,"ingrese la cantidad a convertir")) ;
+				System.out.println(cantidad);
+				break;
+			case "Conversor de Temperatura":
+				System.out.println("temperatura no asignada");
+				break;
+			default:
+				break;
+			}
+			
+			
+		}
+	}
+
+}

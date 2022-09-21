@@ -1,0 +1,36 @@
+package ar.com.conversor.clases;
+
+import javax.swing.JOptionPane;
+
+public class Moneda { 
+	double dolar = 275.00;
+	double euro = 144.00;
+	double libra = 168.50;
+	double won = 9.65;
+	double yen= 1.2;
+	
+	public double eleccionMoneda() {
+		String opcionMoneda = JOptionPane.showInputDialog(null,"Selecione Moneda a convertir", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+				new Object[] {"Convertir de pesos a Dolar" , "Convertir de pesos a Euros","Convertir de pesos a Libras-esterlinas","Convertir de pesos a Yen-japonés",
+						"Convertir de pesos a Won-surcoreano"},"Elegir").toString();
+		double moneda = 0;
+		switch (opcionMoneda) {
+		case "Convertir de pesos a Dolar":
+			moneda=this.dolar;
+			break;
+		case"Convertir de pesos a Euros":
+			moneda= this.euro;
+			break;
+		case "Convertir de pesos a Libras-esterlinas":
+			moneda=this.libra;
+			break;
+		case "Convertir de pesos a Yen-japonés":
+			moneda= this.yen;
+			break;
+		case "Convertir de pesos a Won-surcoreano":
+			moneda= this.won;
+			break;
+		}
+		return moneda;
+	}
+}

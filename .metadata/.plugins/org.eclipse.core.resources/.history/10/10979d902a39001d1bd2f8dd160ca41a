@@ -1,0 +1,16 @@
+package ar.com.conversor.clases;
+
+public class Monedas {
+	double pesoArgentino = 0; 
+	double dolar = 275.00;
+	double euro = 144.00;
+	double libras_esterlinas = 168.50;
+	double won_surcoreano = 9.65;
+	double yen_japones = 1.2;
+	
+	public void convertidorMonedaExtranjera(double valor , double moneda) {
+		double monedaValor= valor/ moneda;
+		monedaValor = (double) Math.round(monedaValor*100d)/100; 
+	}
+	
+}

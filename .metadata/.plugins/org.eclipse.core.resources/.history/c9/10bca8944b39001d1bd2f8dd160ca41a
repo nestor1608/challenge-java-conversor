@@ -1,0 +1,11 @@
+package ar.com.conversor.clases;
+
+public class Temperatura {
+	
+	public double CentigradoAFahrenheit(double grados){
+		return (grados* 1.800)+32; 
+	}
+	public double FahrenheitACentigrado(double grados){
+		return (grados-32)/ 1.800; 
+	}
+}

@@ -1,0 +1,15 @@
+package ar.com.conversor.clases;
+
+import javax.swing.*;
+public class Main {
+	public static void main(String[] args) {
+		
+		while(true) {
+			String opcionMenu = JOptionPane.showInputDialog(null,"Selecione opcion de conversor", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+					new Object[] {"conversor de Monedas" , "conversor de Temperatura"},"Elegir").toString(); 
+			
+			JOptionPane.showMessageDialog(null, opcionMenu);
+		}
+	}
+
+}

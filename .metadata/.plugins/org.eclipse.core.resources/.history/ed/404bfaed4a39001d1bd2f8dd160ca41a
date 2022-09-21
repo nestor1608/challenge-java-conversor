@@ -1,0 +1,44 @@
+package ar.com.conversor.clases;
+
+import javax.swing.*;
+public class Main {
+	public static void main(String[] args) {
+		Moneda moneda = new Moneda();
+		
+		while(true) {
+			String opcionMenu = JOptionPane.showInputDialog(null,"Selecione opcion de conversor", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+					new Object[] {"Conversor de Monedas" , "Conversor de Temperatura"},"Elegir").toString(); 
+			
+				try {
+					if(opcionMenu == "Conversor de Monedas") {
+						String tipoConversion = JOptionPane.showInputDialog(null,"Selecione tipo convercion", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+								new Object[] {"de pesos-argentinos a " , "moneda extrajera a pesos-argentinos "},"Elegir").toString();
+						if(tipoConversion =="de pesos-argentinos a ") {
+							moneda.aMonedaExtranjera();
+						}
+						else {
+							moneda.aPesos();
+						}
+					}else{
+					System.out.println("temperatura no asignada");
+					};
+					int respuesta= JOptionPane.showConfirmDialog(null,"Desea realizar otra convercion?");
+					if (JOptionPane.OK_OPTION == respuesta) {
+						System.out.println("seleccion afirmativa");
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "Programa Terminado");
+						break;
+					}
+					
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null,"Introduzca un valor numerico","WARNING_MESSAGE",JOptionPane.WARNING_MESSAGE);
+				}
+				
+				
+			
+			
+		}
+	}
+
+}

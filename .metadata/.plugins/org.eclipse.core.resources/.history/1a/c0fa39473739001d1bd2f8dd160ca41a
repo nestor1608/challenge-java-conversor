@@ -1,0 +1,13 @@
+package ar.com.conversor.clases;
+
+import javax.swing.JOptionPane;
+
+public class Conversor {
+	
+	public double convertidorMonedaExtranjera(double valor , double moneda) {
+		double monedaValor= valor/ moneda;
+		monedaValor = (double) Math.round(monedaValor*100d)/100;
+		return monedaValor;
+	}
+	
+}

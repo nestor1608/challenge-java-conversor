@@ -1,0 +1,35 @@
+package ar.com.conversor.clases;
+
+import javax.swing.JOptionPane;
+
+public class Conversor {
+	
+	public double convertidorMonedaExtranjera( double moneda) {
+		String input =JOptionPane.showInputDialog(null,"ingrese la cantidad a convertir");
+		double valor = Integer.parseInt(input);
+		double monedaValor= valor/ moneda;
+		monedaValor = (double) Math.round(monedaValor*100d)/100;
+		return monedaValor;
+	}
+	public double convertirAPesos(double peso) {
+		String input =JOptionPane.showInputDialog(null,"ingrese la cantidad a convertir");
+		double valor = Integer.parseInt(input);
+		double pesos= valor * peso;
+		pesos = (double) Math.round(pesos*100d)/100;
+		return pesos;
+	}
+	
+	public void Temperatura(double grados) {
+		Temperatura temperatura = new Temperatura();
+		String opcionEscala = JOptionPane.showInputDialog(null,"como desea convertirlo", "Menu", JOptionPane.QUESTION_MESSAGE,null,
+				new Object[] {"Centrigrados a Fahrenheit","Fahrenheit a Centigrados"},"Elegir").toString();
+		
+		if(opcionEscala== "Centrigrados a Fahrenheit") {
+			JOptionPane.showMessageDialog(null,temperatura.CentigradoAFahrenheit(grados)  + "Fahrenheit (°F)");
+		}else {
+			JOptionPane.showMessageDialog(null,temperatura.FahrenheitACentigrado(grados)+ " Centigrados (°C)");
+			
+		}
+	}
+	
+}
